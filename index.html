@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dee Clean Laundry Lekki | Premium Lekki Dry Cleaning</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-            <style>
+            : 1.8rem; margin-bottom: 10px; }
+<style>
     :root {
         --primary-blue: #003087;
         --logo-light-blue: #1A73E8;
@@ -13,7 +14,6 @@
         --dark-text: #111;
     }
 
-    /* Reset for Full Screen Display */
     * {
         box-sizing: border-box;
     }
@@ -25,15 +25,15 @@
         color: var(--dark-text);
         line-height: 1.6;
         background-color: white;
-        overflow-x: hidden; /* Prevents side-scrolling */
+        overflow-x: hidden;
     }
 
     header {
         background: #fff;
-        padding: 20px 10px; /* Increased padding for better spacing */
+        padding: 20px 10px;
         text-align: center;
         width: 100%;
-        /* Removed position: sticky to let it scroll upwards */
+        /* No sticky position here so it scrolls up */
     }
 
     .logo-container {
@@ -44,21 +44,18 @@
     }
 
     .logo-placeholder {
-        max-width: 90%; /* Allows it to fill more of the screen width */
+        max-width: 90%;
         height: auto;
-        max-height: 120px;
+        max-height: 110px;
     }
 
     .hero {
         background: linear-gradient(135deg, white 0%, var(--bg-light) 100%);
         color: var(--primary-blue);
-        padding: 60px 20px;
+        padding: 50px 20px;
         text-align: center;
-        width: 100%;
     }
 
-    /* Rest of your styles remain the same... */
-    .hero h1 { font-weight: 600; font-size: 1.8rem; margin-bottom: 10px; }
     .btn-whatsapp {
         background: var(--logo-light-blue);
         color: white;
@@ -69,26 +66,57 @@
         display: inline-block;
         box-shadow: 0 6px 20px rgba(26, 115, 232, 0.25);
     }
+
+    /* THE PILLARS SECTION - BACK TO ORIGINAL GRID */
+    .pillars {
+        padding: 40px 10px;
+        background: var(--bg-light);
+        text-align: center;
+    }
+
+    .pillars-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* Forces 3 columns */
+        gap: 10px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .pillar-item h4 {
+        color: var(--primary-blue);
+        margin: 5px 0;
+        font-size: 0.9rem; /* Smaller font to fit mobile screens */
+    }
+
+    .pillar-item p {
+        color: var(--logo-light-blue);
+        font-size: 0.75rem;
+        margin: 0;
+    }
+
+    /* Rest of the layout */
     .service-grid {
         display: grid;
-        grid-template-columns: 1fr; /* Single column for better mobile display */
+        grid-template-columns: 1fr;
         gap: 20px;
         padding: 20px;
     }
+
     .card {
         background: #fff;
         padding: 25px;
         border-radius: 15px;
         border: 1px solid rgba(0,48,135,0.08);
     }
+
     footer {
         background: var(--primary-blue);
         color: white;
         text-align: center;
         padding: 40px 20px;
-        width: 100%;
     }
-            </style>
+</style>
+    
     
 </head>
 <body>
