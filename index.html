@@ -117,6 +117,38 @@
             margin: 15px 0;
         }
         footer { background: var(--dark-blue); color: white; padding: 40px 20px; text-align: center; font-size: 0.8rem; }
+                /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 20px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 9999; /* Ensures it stays on top of everything */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        .whatsapp-float img {
+            width: 35px;
+            height: 35px;
+        }
+        
     </style>
 </head>
 <body>
@@ -184,6 +216,11 @@
         <p>1 Kayode Otitoju St, Lekki Phase 1, Lagos</p>
         <p>&copy; 2026 Dee Clean Laundry Lekki</p>
     </footer>
+            <a href="https://wa.me/2349117266758?text=Hello%20Dee%20Clean%2C%20I'm%20visiting%20your%20website%20and%20want%20to%20book%20a%20service." class="whatsapp-float" target="_blank">
+        <svg viewBox="0 0 24 24" width="35" height="35" fill="currentColor">
+            <path d="M12.031 6.172c-2.203 0-3.991 1.789-3.991 3.991 0 .644.153 1.254.421 1.791L7.13 15.111l3.256-1.129c.517.221 1.087.345 1.687.345 2.203 0 3.991-1.789 3.991-3.991s-1.787-3.991-3.983-3.991zm0 7.234c-.503 0-.97-.132-1.374-.361l-.242-.136-1.428.494.463-1.341-.151-.253c-.266-.445-.419-.969-.419-1.529 0-1.567 1.276-2.842 2.842-2.842 1.567 0 2.842 1.276 2.842 2.842-.001 1.567-1.277 2.842-2.842 2.842zM21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9zm-2 0c0-3.86-3.14-7-7-7s-7 3.14-7 7 3.14 7 7 7 7-3.14 7-7z"/>
+        </svg>
+    </a>
 
 </body>
 </html>
