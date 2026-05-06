@@ -80,14 +80,39 @@
 
         /* The 3 Pillars (Clean, Fresh, Reliable) */
         .pillars {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            padding: 50px 20px;
             background: var(--bg-light);
-            padding: 30px 10px;
             text-align: center;
         }
-        .pillar-item h4 { font-size: 0.8rem; color: var(--dark-blue); }
 
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pillar-item h4 {
+            color: var(--primary-blue);
+            margin: 10px 0;
+        }
+        .pillar-item p {
+            color: var(--logo-light-blue);
+            font-size: 0.9rem;
+        }
+
+        .rating-section {
+            text-align: center;
+            padding: 70px 20px;
+            background: white;
+        }
+
+        .rating {
+            color: #ffcc00;
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
         footer { background: var(--dark-blue); color: white; padding: 40px 20px; text-align: center; font-size: 0.8rem; }
     </style>
 </head>
