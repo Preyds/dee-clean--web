@@ -3,200 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dee Clean Laundry Lekki | Premium Lekki Dry Cleaning</title>
+    <title>Dee Clean Laundry | Premium Care</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
     <style>
-    :root {
-        --primary-blue: #003087;
-        --logo-light-blue: #1A73E8;
-        --bg-light: #F0F4F9; 
-        --dark-text: #111;
-    }
+        :root {
+            --dark-blue: #003087;
+            --accent-blue: #1A73E8;
+            --top-bar: #002266;
+            --bg-light: #f8f9fa;
+        }
 
-    * {
-        box-sizing: border-box;
-    }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    body {
-        font-family: 'Poppins', sans-serif;
-        margin: 0;
-        padding: 0;
-        color: var(--dark-text);
-        line-height: 1.6;
-        background-color: white;
-        overflow-x: hidden; /* Prevents side-scrolling */
-    }
+        body { font-family: 'Poppins', sans-serif; background: #fff; color: #333; overflow-x: hidden; }
 
-    header {
-        background: #fff;
-        padding: 20px 10px;
-        text-align: center;
-        width: 100%;
-        /* No sticky position here so it scrolls up */
-    }
+        /* 1. Top Contact Strip (CleanAce Style) */
+        .top-strip {
+            background: var(--top-bar);
+            color: white;
+            padding: 8px 20px;
+            font-size: 0.75rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .logo-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
+        /* Header & Menu */
+        header {
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+        .logo-placeholder { max-height: 80px; width: auto; }
 
-    logo-placeholder {
-        max-width: 90%;
-        height: auto;
-        max-height: 110px;
-    }
-
-    .hero {
-        background: linear-gradient(135deg, white 0%, var(--bg-light) 100%);
-        color: var(--primary-blue);
-        padding: 50px 20px;
-        text-align: center;
-    }
-
-    .btn-whatsapp {
-        background: var(--logo-light-blue);
-        color: white;
-        padding: 15px 35px;
-        text-decoration: none;
-        border-radius: 50px;
-        font-weight: 600;
-        display: inline-block;
-        box-shadow: 0 6px 20px rgba(26, 115, 232, 0.25);
-    }
-
-    /* THE PILLARS SECTION - BACK TO ORIGINAL GRID */
-    .pillars {
-        padding: 40px 10px;
-        background: var(--bg-light);
-        text-align: center;
-    }
-
-    .pillars-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr; /* Forces 3 columns */
-        gap: 10px;
-        max-width: 100%;
-        margin: 0 auto;
-    }
-
-    .pillar-item h4 {
-        color: var(--primary-blue);
-        margin: 5px 0;
-        font-size: 0.9rem; /* Smaller font to fit mobile screens */
-    }
-
-    .pillar-item p {
-        color: var(--logo-light-blue);
-        font-size: 0.75rem;
-        margin: 0;
-    }
-
-    /* Rest of the layout */
-        .service-grid {
-        display: grid;
-        grid-template-columns: 1fr; /* Stacked for mobile readability */
-        gap: 15px;
-        padding: 0 20px;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-
-    .card {
-        background: #fff;
-        padding: 25px;
-        border-radius: 15px;
-        border: 1px solid rgba(0,48,135,0.08);
-        text-align: left;
-    }
-
-    .rating-section {
+        /* 2. Impact Hero Section */
+        .hero {
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
+                        url('https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&q=80&w=800');
+            background-size: cover;
+            padding: 50px 20px;
             text-align: center;
-            padding: 70px 20px;
-            background: white;
         }
 
-        .rating {
-            color: #ffcc00;
-            font-size: 1.5rem;
-            margin: 15px 0;
+        .hero h1 { color: var(--dark-blue); font-size: 1.8rem; margin-bottom: 15px; }
+
+        /* "Schedule a Pick-Up" Button (CleanAce Style) */
+        .btn-pickup {
+            background: var(--accent-blue);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px; /* CleanAce uses sharper edges */
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 10px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
         }
 
-    footer {
-        background: var(--primary-blue);
-        color: white;
-        text-align: center;
-        padding: 40px 20px;
-    }
-        </style>
-    
+        /* 3. Service Cards with Icons */
+        .services-section { padding: 40px 20px; background: #fff; }
+        .service-card {
+            border: 1px solid #eee;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .service-icon { font-size: 2.5rem; margin-bottom: 15px; display: block; }
+        .service-card h3 { color: var(--dark-blue); margin-bottom: 10px; font-size: 1.1rem; }
+        .service-card p { font-size: 0.85rem; color: #666; }
+        .read-more { color: var(--accent-blue); text-decoration: none; font-size: 0.8rem; font-weight: 600; display: block; margin-top: 15px; }
+
+        /* The 3 Pillars (Clean, Fresh, Reliable) */
+        .pillars {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            background: var(--bg-light);
+            padding: 30px 10px;
+            text-align: center;
+        }
+        .pillar-item h4 { font-size: 0.8rem; color: var(--dark-blue); }
+
+        footer { background: var(--dark-blue); color: white; padding: 40px 20px; text-align: center; font-size: 0.8rem; }
+    </style>
 </head>
 <body>
 
-<header>
-    <div class="logo-container">
-        <img src="<a href="https://ibb.co/yng28Cfd"><img src="https://i.ibb.co/xSzZMbCX/1000080839-2026-05-06-15-25-14-455797.webp" alt="1000080839-2026-05-06-15-25-14-455797" border="0"></a>
+    <div class="top-strip">
+        <span>📍 Lekki Phase 1</span>
+        <span>📞 0911 726 6758</span>
     </div>
-</header>
-    
+
+    <header>
+        <img src="logo.png" alt="Dee Clean Logo" class="logo-placeholder">
+    </header>
 
     <section class="hero">
-        <h1>Premium Lekki Dry Cleaning</h1>
-        <p>Lekki Phase 1's choice for unmatched care, five-star quality, and total reliability.</p>
-        <a href="https://wa.me/2349117266758?text=Hello%20Dee%20Clean%2C%20I'd%20like%20to%20schedule%20a%20premium%20pickup." class="btn-whatsapp">
-            Book a Pickup via WhatsApp
-        </a>
+        <p style="color: #ff4400; font-weight: 600; font-size: 0.9rem; text-transform: uppercase;">Free Pick-up & Delivery</p>
+        <h1>Drycleaning is our DNA</h1>
+        <p style="margin-bottom: 20px; color: #555;">Professional care for your finest fabrics.</p>
+        <a href="https://wa.me/2349117266758" class="btn-pickup">Schedule a Pick-Up ➔</a>
     </section>
 
-    <section class="services">
-        <h2 class="services-header">Our Specialized Services</h2>
-       <div class="service-grid">
-    <div class="card">
-        <h3>Executive Dry Cleaning</h3>
-        <p>Suits, Agbada, Gowns, and high-end formal wear treated with premium care.</p>
-    </div>
-    <div class="card">
-        <h3>Luxury Home Care</h3>
-        <p>Professional cleaning for curtains, beddings, duvets, and home essentials.</p>
-    </div>
-</div>
+    <section class="services-section">
+        <div class="service-card">
+            <span class="service-icon">👕</span>
+            <h3>Drycleaning and Laundry</h3>
+            <p>Special care for your clothing using only the most gentle processes.</p>
+            <a href="#" class="read-more">READ MORE</a>
+        </div>
 
+        <div class="service-card">
+            <span class="service-icon">🏠</span>
+            <h3>Luxury Home Care</h3>
+            <p>Expert cleaning for curtains, duvets, and premium bedsheets.</p>
+            <a href="#" class="read-more">READ MORE</a>
         </div>
     </section>
 
-    <section class="pillars">
-        <div class="pillars-grid">
-            <div class="pillar-item">
-                <p>💎</p>
-                <h4>Clean</h4>
-                <p>Zero compromises.</p>
-            </div>
-            <div class="pillar-item">
-                <p>🌿</p>
-                <h4>Fresh</h4>
-                <p>Premium finish.</p>
-            </div>
-            <div class="pillar-item">
-                <p>✅</p>
-                <h4>Reliable</h4>
-                <p>Every time.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="rating-section">
-        <h2>Rated 5 Stars by Lekki Residents</h2>
-        <div class="rating">★★★★★</div>
-        <p>"Really efficient service and kind staff."</p>
-        <p><strong>Over 10 Verified Google Reviews</strong></p>
-    </section>
+    <div class="pillars">
+        <div class="pillar-item"><h4>CLEAN</h4></div>
+        <div class="pillar-item"><h4>FRESH</h4></div>
+        <div class="pillar-item"><h4>RELIABLE</h4></div>
+    </div>
 
     <footer>
         <p>1 Kayode Otitoju St, Lekki Phase 1, Lagos</p>
-        <p>Contact Us: +234 911 726 6758</p>
-        <p>&copy; 2026 Dee Clean Laundry. All Rights Reserved.</p>
+        <p>&copy; 2026 Dee Clean Laundry Lekki</p>
     </footer>
 
 </body>
