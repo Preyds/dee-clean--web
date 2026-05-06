@@ -95,11 +95,13 @@
     }
 
     /* Rest of the layout */
-    .service-grid {
+        .service-grid {
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 20px;
+        grid-template-columns: 1fr; /* Stacked for mobile readability */
+        gap: 15px;
+        padding: 0 20px;
+        max-width: 600px;
+        margin: 0 auto;
     }
 
     .card {
@@ -107,7 +109,9 @@
         padding: 25px;
         border-radius: 15px;
         border: 1px solid rgba(0,48,135,0.08);
+        text-align: left;
     }
+
     .rating-section {
             text-align: center;
             padding: 70px 20px;
@@ -148,19 +152,17 @@
 
     <section class="services">
         <h2 class="services-header">Our Specialized Services</h2>
-        <div class="service-grid">
-            <div class="card">
-                <h3>Executive Dry Cleaning</h3>
-                <p>Suits, Agbada, Gowns, and high-end formal wear.</p>
-            </div>
-            <div class="card">
-                <h3>Expert Alterations</h3>
-                <p>Precision tailoring, fixes, and perfect sizing.</p>
-            </div>
-            <div class="card">
-                <h3>Luxury Home Care</h3>
-                <p>Curtains, beddings, duvets, and home essentials.</p>
-            </div>
+       <div class="service-grid">
+    <div class="card">
+        <h3>Executive Dry Cleaning</h3>
+        <p>Suits, Agbada, Gowns, and high-end formal wear treated with premium care.</p>
+    </div>
+    <div class="card">
+        <h3>Luxury Home Care</h3>
+        <p>Professional cleaning for curtains, beddings, duvets, and home essentials.</p>
+    </div>
+</div>
+
         </div>
     </section>
 
